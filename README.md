@@ -5,28 +5,28 @@ A simple web application built with Django that allows users to get current weat
 <br>
 Features:
 <br>
-User-friendly interface for entering city names.
+-User-friendly interface for entering city names.
 <br>
-Displays current temperature, humidity, country code, and coordinates.
+-Displays current temperature, humidity, country code, and coordinates.
 <br>
-Uses OpenWeatherMap API to fetch real-time weather data.
+-Uses OpenWeatherMap API to fetch real-time weather data.
 <br>
-Securely manages API key using environment variables.
+-Securely manages API key using environment variables.
 <br>
-Prerequisites
+Prerequisites:
 <br>
-Python 3.x
+-Python 3.x
 <br>
-Django 3.x or later
+-Django 3.x or later
 <br>
-OpenWeatherMap API Key
-<br>
-
-
+-OpenWeatherMap API Key
 <br>
 
-Usage
-Enter the name of the city you want to get the weather information for in the input field.
+
+<br>
+
+Usage:
+-Enter the name of the city you want to get the weather information for in the input field.
 Click on the "Get Weather" button.
 The app will display the current weather details, including temperature, humidity, country code, and coordinates.
 <br>
