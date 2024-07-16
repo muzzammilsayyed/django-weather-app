@@ -26,7 +26,8 @@ Prerequisites:
 <br>
 
 Usage:
--Enter the name of the city you want to get the weather information for in the input field.
+<br>
+Enter the name of the city you want to get the weather information for in the input field.
 Click on the "Get Weather" button.
 The app will display the current weather details, including temperature, humidity, country code, and coordinates.
 <br>
