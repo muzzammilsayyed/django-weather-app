@@ -1,4 +1,4 @@
-# django-weather-app
+
 <h1>Django Weather App</h1>
 <br>
 A simple web application built with Django that allows users to get current weather information for any city using the OpenWeatherMap API.
@@ -16,10 +16,12 @@ Securely manages API key using environment variables.
 Prerequisites
 <br>
 Python 3.x
+<br>
 Django 3.x or later
+<br>
 OpenWeatherMap API Key
-Installation
-Clone the Repository
+<br>
+
 
 <br>
 
@@ -31,14 +33,14 @@ The app will display the current weather details, including temperature, humidit
 
 Code Overview
 <br>
-views.py
+views.py:
 The views.py file contains the main logic for fetching and displaying the weather data.
 <br>
-weather.html
+weather.html:
 The weather.html template file provides the frontend for the app.
 <br>
 
-Acknowledgements
+Acknowledgements:
 Django
 OpenWeatherMap
 python-decouple
