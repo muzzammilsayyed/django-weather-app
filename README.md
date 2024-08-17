@@ -45,6 +45,5 @@ Acknowledgements:
 Django
 OpenWeatherMap
 python-decouple
-```bash
-this is to check .
+
 
