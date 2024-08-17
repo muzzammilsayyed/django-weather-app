@@ -46,4 +46,102 @@ Django
 OpenWeatherMap
 python-decouple
 
+# Hacker News API with FastAPI
+
+## Overview
+
+This project provides a FastAPI-based API that interacts with the Hacker News API to fetch and display top news items. It features caching with `cachetools`, error handling, and can be run using Docker or directly in a virtual environment.
+
+## Features
+
+- **API Endpoint**: Retrieves top news items from Hacker News.
+- **Caching**: Uses in-memory caching with `cachetools` to store results for 10 minutes.
+- **Error Handling**: Manages cases where the Hacker News API is unavailable or returns an error.
+- **Dockerization**: The application is containerized for easy deployment.
+- **Logging**: Includes logging for debugging and monitoring.
+
+## Prerequisites
+
+- **Docker** (optional, for containerized setup)
+- **Python 3.11** (if not using Docker)
+- **pip** (Python package installer)
+
+## Setup Instructions
+
+### Using Docker
+
+1. **Build the Docker Image**
+
+```
+   docker build -t fastapi-app . 
+```   
+   
+2. **Run the Docker Container**
+
+```
+  docker run -d --name fastapi-container -p 8000:8000 fastapi-app
+```  
+
+3. **Access the API**
+
+Open your browser and navigate to http://localhost:8000 or use curl to test the API:
+
+```
+  curl http://localhost:8000/top-news?count=5
+```  
+
+
+5. **Without Docker**
+## Set Up a Virtual Environment
+
+```
+python -m venv venv
+```
+```
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+6. **Install Dependencies**
+
+```
+pip install -r requirements.txt
+```
+7. **Run the Application**
+
+```
+Copy code
+uvicorn app.main:app --host 0.0.0.0 --port 8000
+```
+
+8. **Access the API**
+
+Open your browser and navigate to http://localhost:8000 or use curl:
+
+```
+curl http://localhost:8000/top-news?count=5
+```
+
+## API Endpoint
+
+### GET /top-news
+Retrieve the top news items from Hacker News.
+
+#### Query Parameters:
+- **count** (optional): The number of top news items to return. Defaults to 10 if not specified.
+
+#### Responses:
+- **200 OK**: Returns a JSON array of top news items.
+- **500 Internal Server Error**: Returns an error message if there is an issue with the Hacker News API.
+
+
+### Assumptions
+- **API Rate Limiting**: It is assumed that the Hacker News API does not impose strict rate limits. The application handles errors gracefully if rate limits are exceeded.
+
+- **Dependencies**: All dependencies are specified in requirements.txt, including pytest, httpx, fastapi, uvicorn, and cachetools.
+- **Environment**: The application is designed to run in both Docker and a local virtual environment. The Dockerfile uses Python 3.11 and the requirements.txt file includes all necessary packages.
+
+## Additional Notes
+- **Caching**: In-memory caching is implemented using cachetools to minimize API calls to Hacker News. The cache duration is set to 10 minutes.
+- **Logging**: Logging is implemented to track API requests and responses, which aids in debugging and monitoring.
+
 
